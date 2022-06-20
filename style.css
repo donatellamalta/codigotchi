@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%; /* html big as the viewport*/
+    background: linear-gradient(#828bf8, #3e3fed);
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+}
+
+main{
+    text-align: center;
+}
+
+h2{
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+h3{
+    font-size: 14px;
+    color: #4B668E;
+    margin-bottom: 15px;
+}
+
+img{
+    max-width: 100%;
+    
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 24px;
+}
+header img{
+    width: 56px;
+}
+
+.codigotchi{
+    width: 230px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom:24px;
+}
+
+.codigotchi-screen{
+    position: absolute; /*The position is absolute to the first parent which has relative position*/
+    top: 121px;
+    left: 60px;
+    width: 114px;
+    height: 112px;
+    background-image: url('images/static.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+}
+
+/*Overlaying classes*/
+.codigotchi-screen_sleep{
+    background-image: url('images/dormi.gif');
+}
+
+.codigotchi-screen_dance{
+    background-image: url('images/balla.gif');
+}
+
+.codigotchi-screen_eat{
+    background-image: url('images/mangia.gif');
+}
+
+.panels{
+    position: relative;
+
+}
+
+.panel{
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 18px;
+    transition: trasnform 0.2s;
+}
+
+.button-mic{
+    border: none;
+    border-radius: 8px;;
+    background-color: #f71568;
+    padding: 10px 20px;
+    margin: 16px;
+}
+
+.commands ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.commands ul li{
+    font-size: 22px;
+    font-weight: bold;    
+}
+
+.panel-mic{
+
+}
+
+.panel-commands{
+    position: absolute; /*Give posizion relative to its parent panels*/
+    top: 0;
+    left: 0;
+    /* display: none; */
+    visibility: hidden; /*teh panel is there but not visible, I use it in order to apply transitions*/
+    transform: scale(0);
+}
+
+.listening .panel-mic{
+    /* display: none; */
+    visibility: hidden;
+    transform: scale(0);
+
+}
+
+.listening .panel-commands{
+    /* display: block; */
+    visibility: visible;
+    transform: scale(1);
+}
