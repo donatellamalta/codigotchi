@@ -10,3 +10,4 @@ It uses the **Web Speech API**, in particular the _SpeechRecognition_ interface 
 
 Once the microphone is activated and the rigth commands are recognized, the duck start to move accordinf to the command.
 
+Try it [here](https://codigotchibool.netlify.app)!
